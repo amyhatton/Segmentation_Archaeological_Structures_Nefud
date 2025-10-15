@@ -25,6 +25,20 @@ This work is licensed under a
 
 ## Further information
 
+### Running code locally
+### Running code on HPC system that uses SLURM
+
+You need to first create an Apptainer container (with the required packages)
+
+apptainer build --fakeroot nvidia_pytorch.sif nvidia_pytorch.def 
+
+Where .def is the definition file and .sif is the container image that is created. 
+
+You will need to upload the code and data to the HPC and then run this code by calling the slurm script as follows:
+
+sbatch run_job.sh
+
+
 (Free text no longer than 10000 characters)
 
 ## Dataset persistent identifier
