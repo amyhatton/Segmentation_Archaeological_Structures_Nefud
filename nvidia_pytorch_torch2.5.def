@@ -1,0 +1,30 @@
+Bootstrap: docker
+From: nvcr.io/nvidia/pytorch:24.10-py3
+
+%files
+    requirements.txt /app/requirements.txt
+
+%post
+    #Create the app directory
+    mkdir -p /app
+
+    # Upgrade pip
+    pip3 install --upgrade pip
+    apt-get update
+    apt-get install -y libpng-dev libjpeg-dev
+
+
+    #Install dependencies
+    pip uninstall -y numpy six
+    pip install numpy==1.26.4 six==1.16.0
+    pip install -r /app/requirements.txt --no-cache-dir
+    pipdeptree --warn silence
+
+%labels
+    author hatton@gea.mpg.de
+
+%help
+    The converted Docker image for NVIDIAs PyTorch (version 23.09),
+    customised for my phd thesis (with necessary pip packages)
+
+

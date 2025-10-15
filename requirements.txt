@@ -1,0 +1,25 @@
+# PyTorch and related packages
+torchmetrics==1.7.1
+segmentation-models-pytorch==0.4.0
+torchinfo==1.8.0
+
+# Data science and ML utilities
+numpy==1.26.4
+pandas==2.2.2
+scikit-learn>=1.5.1
+matplotlib==3.8.4
+albumentations==2.0.8
+pycocotools==2.0.8
+
+# Image processing
+Pillow==11.1.0
+
+# System utilities
+psutil==6.0.0
+wget==3.2
+colorama==0.4.6
+
+# Lightning framework
+lightning==2.5.1.post
+
+six==1.16.0
