@@ -2,3 +2,8 @@ data
 qgis_thumbnails.py
 __pycache__/
 .DS_Store
+tb_logs
+plots
+checkpoints
+outputs
+nvidia_pytorch_2.sif
